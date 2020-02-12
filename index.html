@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/images/img/apple-touch-icon.png">
-  <link rel="icon" type="image/png" href="/images/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/defect/images/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/defect/images/img/favicon.png">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -115,7 +115,7 @@
 </nav>
 
     <div class="view intro-2" id="background"
-         style="background: url('/images/img/index.png')no-repeat center center;
+         style="background: url('/defect/images/img/index.png')no-repeat center center;
            background-size: cover;
            background-attachment: fixed;">
       <div class="full-bg-img">
@@ -152,8 +152,60 @@
   <div class="row mb-4 mx-auto">
     
     
+      <div class="col-12 col-md-4 m-auto">
+        <a href="/defect/auto-backup.html" target="_self">
+          <img src="/defect/images/自动备份大法/bakcup.jpg" srcset="/defect/images/img/loading.gif" alt="自动备份大法" class="img-fluid rounded z-depth-3 index-thumbnails">
+        </a>
+      </div>
+    
     <div class="col-12 col-md-8 m-auto">
-      <a href="/defect/test.html">
+      <a href="/defect/auto-backup.html">
+        <p class="h4 index-header">自动备份大法</p>
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">引入最近看到几个数据爆炸的可怕事件，虽然我平时偶尔有手动备份的，但还是不怎么放心。以前有用过lsyncd自动同步到其他机器。但昨天发生了一个更可怕的事情，我重启机器后发现mysql启动不了，apt也不能update了。当时就蒙了，后来发现是我的/var目录满了。mysql与apt都需要用到/var目录，所以爆炸了。但是为什么会满呢…
+因为一个lsyncd的日志写了34GB。
+
+操作放弃lsyncd。
+以前因为懒，写过一个自动压缩网页根目录的脚本，配合crontab在每天的凌晨自动执行一遍非常不错。
+但是最重要的不是根目录，而是数据库。最近有了解到mysqldump，表示可以crontab一下。
+dump为sql文件导出整个数据库：
+mysqldump -u 用户名 -p 数据库名 &gt; 导出的文件名例：
+mysqldump -u root -p typecho &gt; typecho_backup.sql导出一个表
+mysqldump -u 用户名 -p 数据库名 表名&gt; 导出的文件名例：
+mysqldump -u root -p typecho users &gt; us</div>
+        </div>
+      </a>
+
+      <div>
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2019-06-05&nbsp;&nbsp;
+        
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/Linux">Linux</a>&nbsp;
+          
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4 mx-auto">
+    
+    
+      <div class="col-12 col-md-4 m-auto">
+        <a href="/defect/hello-world.html" target="_self">
+          <img src="/defect/images/hello-world/index.jpg" srcset="/defect/images/img/loading.gif" alt="Hello World" class="img-fluid rounded z-depth-3 index-thumbnails">
+        </a>
+      </div>
+    
+    <div class="col-12 col-md-8 m-auto">
+      <a href="/defect/hello-world.html">
         <p class="h4 index-header">Hello World</p>
         
         
@@ -175,14 +227,9 @@ More info: Deployment
 
       <div>
         
-          <i class="iconfont icon-riqi2"></i>&nbsp;2020-02-12&nbsp;&nbsp;
+          <i class="iconfont icon-riqi2"></i>&nbsp;1999-06-05&nbsp;&nbsp;
         
         
-        
-          <i class="iconfont icon-tag"></i>
-          
-            <a href="/tags/test">test</a>&nbsp;
-          
         
       </div>
     </div>
@@ -275,7 +322,7 @@ More info: Deployment
   <script src="/lib/prettify/prettify.min.js" ></script>
   <script>
     $(document).ready(function () {
-      $('pre').addClass('prettyprint  linenums');
+      $('pre').addClass('prettyprint  ');
       prettyPrint();
     })
   </script>
